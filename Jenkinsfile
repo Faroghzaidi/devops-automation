@@ -14,7 +14,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t farogh/kubernetes .'
+                    sh 'docker build -t faroghzaidi/kubernetes .'
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline {
                     sh 'docker login -u faroghzaidi -p ${dockerhubpwd}'
                         
                     }
-                    sh 'docker push farogh/kubernetes'
+                    sh 'docker push faroghzaidi/kubernetes'
                 }
             }
         }
